@@ -5,7 +5,9 @@
 ;; A minor mode that allows hiding and showing hunks and files in a
 ;; diff-mode buffer.
 ;;
-;; To install, turn it on for all diff buffers with
+;; To install add it to your elisp path,
+;;   (require diff-fold)
+;; then turn it on for all diff buffers with:
 ;;   (add-hook 'diff-mode-hook 'turn-on-diff-fold)
 ;;
 ;; By default, the minor mode binds hiding/showing behavior to TAB
@@ -17,21 +19,21 @@
 ;;
 ;; Under Emacs 27, diff-fold plays well with `diff-font-lock-prettify`.
 ;;
-;; Setup example, with use-package and `diff-default-read-only`:
+;; Setup example, with use-package and straight:
 ;;
 ;; (use-package diff-mode
-;;   :bind (:map diff-mode-shared-map
-;;          ("H" . diff-fold-hide-all-files)
-;;          ("h" . diff-fold-toggle)
-;;          ("S" . diff-fold-show-all)
-;;          ("TAB" . diff-fold-toggle)
-;;          ("S-TAB" . diff-fold-toggle-file)
-;;          ("<backtab>" . diff-fold-toggle-file))
-;;  :hook ((diff-mode . turn-on-diff-fold))
-;;  :config
-;;  (setq diff-font-lock-prettify t
-;;        diff-default-read-only t))
+;;   :hook ((diff-mode . turn-on-diff-fold)))
 ;;
+;; (use-package diff-fold
+;;   :straight (:type git :repo "https://github.com/szermatt/diff-fold.git")
+;;   :bind (:map diff-mode-shared-map
+;;               ("H" . diff-fold-hide-all-files)
+;;               ("h" . diff-fold-toggle)
+;;               ("S" . diff-fold-show-all)
+;;               ("TAB" . diff-fold-toggle)
+;;               ("S-TAB" . diff-fold-toggle-file)
+;;               ("<backtab>" . diff-fold-toggle-file)))
+
 
 (require 'diff-mode)
 

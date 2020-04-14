@@ -10,9 +10,12 @@ Diff-fold requires at least Emacs 26.
 
 ## Installation
 
-To install, turn it on for all diff buffers with:
-
-```elisp
+To install add it to your elisp path,
+```
+(require diff-fold)
+```
+then turn it on for all diff buffers with:
+```
 (add-hook 'diff-mode-hook 'turn-on-diff-fold)
 ```
 
@@ -28,21 +31,21 @@ If you use diff-mode in read-only mode, with `diff-default-read-only`
 set to t, you'll want to add your own shortcuts directly to
 `diff-mode-shared-map`.
 
-Setup example, with use-package and `diff-default-read-only`:
+Setup example, with use-package and straight:
 
 ```elisp
 (use-package diff-mode
+  :hook ((diff-mode . turn-on-diff-fold)))
+
+(use-package diff-fold
+  :straight (:type git :repo "https://github.com/szermatt/diff-fold.git")
   :bind (:map diff-mode-shared-map
-         ("H" . diff-fold-hide-all-files)
-         ("h" . diff-fold-toggle)
-         ("S" . diff-fold-show-all)
-         ("TAB" . diff-fold-toggle)
-         ("S-TAB" . diff-fold-toggle-file)
-         ("<backtab>" . diff-fold-toggle-file))
- :hook ((diff-mode . turn-on-diff-fold))
- :config
- (setq diff-font-lock-prettify t
-       diff-default-read-only t))
+              ("H" . diff-fold-hide-all-files)
+              ("h" . diff-fold-toggle)
+              ("S" . diff-fold-show-all)
+              ("TAB" . diff-fold-toggle)
+              ("S-TAB" . diff-fold-toggle-file)
+              ("<backtab>" . diff-fold-toggle-file)))
 ```
 
 ## Testing
