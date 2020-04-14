@@ -31,7 +31,9 @@ If you use diff-mode in read-only mode, with `diff-default-read-only`
 set to t, you'll want to add your own shortcuts directly to
 `diff-mode-shared-map`.
 
-Setup example, with use-package and straight:
+## Setup Example
+
+Full setup, with use-package and straight:
 
 ```elisp
 (use-package diff-mode
