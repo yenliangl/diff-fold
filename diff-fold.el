@@ -11,8 +11,9 @@
 ;; By default, the minor mode binds hiding/showing behavior to TAB
 ;; and shift-TAB in `diff-fold-mode-map`.
 ;;
-;; If use diff-mode in read-only mode, with `diff-default-read-only` to t, you'll
-;; want to add your own shortcuts directly to `diff-mode-shared-map`, for
+;; If you use diff-mode in read-only mode, with
+;; `diff-default-read-only` set to t, you'll want to add your own
+;; shortcuts directly to `diff-mode-shared-map`, for
 ;;
 ;; Under Emacs 27, diff-fold plays well with `diff-font-lock-prettify`.
 ;;

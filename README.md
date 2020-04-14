@@ -24,8 +24,8 @@ Emacs 27.
 
 ## Diff Mode in read-only mode
 
-If use diff-mode in read-only mode, with `diff-default-read-only` set
-to t, you'll want to add your own shortcuts directly to
+If you use diff-mode in read-only mode, with `diff-default-read-only`
+set to t, you'll want to add your own shortcuts directly to
 `diff-mode-shared-map`.
 
 Setup example, with use-package and `diff-default-read-only`:
