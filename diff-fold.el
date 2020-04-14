@@ -315,7 +315,4 @@ used as an around advice."
     (goto-char .start)))
 
 (provide 'diff-fold)
-
-(provide 'diff-fold)
-
 ;;; diff-fold.el ends here
