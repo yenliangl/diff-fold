@@ -1,4 +1,4 @@
-# diff-fold
+# diff-fold  [![test](https://github.com/szermatt/diff-fold/workflows/test/badge.svg)](https://github.com/szermatt/diff-fold/actions)
 
 An Emacs minor mode for diff-mode that allows hiding and showing
 (folding) files and hunks. The resulting behavior is quite similar to
