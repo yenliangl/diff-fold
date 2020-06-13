@@ -5,6 +5,9 @@
 (require 'ert)
 (require 'ert-x)
 
+(when (< emacs-major-version 27)
+  (defvar diff-font-lock-prettify nil))
+
 (defun test-diff-visible-buffer (&optional point-mark)
   "Returns the visible portion of the buffer.
 

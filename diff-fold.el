@@ -7,7 +7,7 @@
 ;; Version: 0.1
 ;; Keywords: diff vc
 ;; URL: http://github.com/szermatt/diff-fold
-;; Package-Requires: ((emacs "27"))
+;; Package-Requires: ((emacs "26.1"))
 
 ;;; Commentary:
 ;;
@@ -235,7 +235,7 @@ If available, OVERLAY should be the overlay found for BOUNDS."
   "Return the end position of the header of the section TYPE at START."
   (save-excursion
     (goto-char start)
-    (if (and diff-font-lock-prettify (eq 'file type))
+    (if (and (symbol-value 'diff-font-lock-prettify) (eq 'file type))
         (progn
           (diff-beginning-of-hunk 2)
           (- (point) 1))
