@@ -1,5 +1,4 @@
-;;; Tests diff-fold.el -*- lexical-binding: t -*-
-;;
+;;; diff-fold-test.el --- Tests for diff-fold -*- lexical-binding: t -*-
 
 (require 'diff)
 (require 'diff-fold)
@@ -518,3 +517,4 @@ diff --git a/words.txt b/words.txt
 "))))
 
 
+;;; diff-fold-test.el ends here

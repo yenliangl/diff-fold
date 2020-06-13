@@ -1,5 +1,14 @@
 ;;; diff-fold.el --- Show/hide hunks and file in diff-mode.  -*- lexical-binding:t -*-
 
+;; Copyright (C) 2020 Stephane Zermatten
+
+;; Author: Stephane Zermatten <szermatt@gmail.com>
+;; Maintainer: Stephane Zermatten <szermatt@gmail.com>
+;; Version: 0.1
+;; Keywords: diff vc
+;; URL: http://github.com/szermatt/diff-fold
+;; Package-Requires: ((emacs "27"))
+
 ;;; Commentary:
 ;;
 ;; A minor mode that allows hiding and showing hunks and files in a
