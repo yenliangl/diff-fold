@@ -52,7 +52,11 @@ Full setup, with use-package and straight:
 
 ## Testing
 
-Run `diff-fold_test.el` with ERT.
+Install [Cask](https://github.com/cask/cask) and run tests with:
+
+```sh
+cask exec ert-runner
+```
 
 ## License
 
