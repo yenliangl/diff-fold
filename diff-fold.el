@@ -64,7 +64,7 @@
   :keymap diff-fold-mode-map
   (if diff-fold-mode
       (progn  ;; turn on
-        (unless (eq major-mode 'diff-mode)
+        (unless (or (eq major-mode 'diff-mode) (eq major-mode 'p4-diff-mode))
           (error "Diff-fold-mode only works in Diff Mode buffers"))
         (add-to-invisibility-spec 'diff-fold)
         (advice-add 'diff-hunk-next :after 'diff-fold--after-hunk-move)
